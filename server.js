@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: true}))
 app.set('view engine','jsx')
 app.engine('jsx',jsxEngine())
 
-app.get('vegetables/new', (req, res) => {
-    res.send('/New')
+app.get('/vegetables/new', (req, res) => {
+    res.render('vegetables/New')
 })
 
 app.listen(PORT, () => {
